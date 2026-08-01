@@ -1,0 +1,23 @@
+# Unitix — Free Unit Converter
+
+Unitix is a free, bilingual (English / 中文) unit-converter toolkit. All calculations run locally in the browser using standard conversion factors. Convert any value by multiplying by the factor listed below, or use the live tool at https://unitix.com/.
+
+## Converters and base-unit factors
+
+- Length (长度): base unit factors — Kilometer = 1000 × base(Length), Meter = 1 × base(Length), Decimeter = 0.1 × base(Length), Centimeter = 0.01 × base(Length)
+- Mass (质量): base unit factors — Metric ton = 1000 × base(Mass), Kilogram = 1 × base(Mass), Gram = 0.001 × base(Mass), Milligram = 1e-06 × base(Mass)
+- Temperature (温度): special conversion (non-linear).
+- Area (面积): base unit factors — Square kilometer = 1e+06 × base(Area), Square meter = 1 × base(Area), Square centimeter = 0.0001 × base(Area), Hectare = 10000 × base(Area)
+- Volume (体积): base unit factors — Cubic meter = 1000 × base(Volume), Liter = 1 × base(Volume), Milliliter = 0.001 × base(Volume), Gallon (US) = 3.78541 × base(Volume)
+- Speed (速度): base unit factors — Meter/second = 1 × base(Speed), Kilometer/hour = 0.277778 × base(Speed), Mile/hour = 0.44704 × base(Speed), Foot/second = 0.3048 × base(Speed)
+- Time (时间): base unit factors — Nanosecond = 1e-09 × base(Time), Microsecond = 1e-06 × base(Time), Millisecond = 0.001 × base(Time), Second = 1 × base(Time)
+- Data (数据): base unit factors — Bit = 0.125 × base(Data), Byte = 1 × base(Data), Kilobit = 125 × base(Data), Kibibit = 128 × base(Data)
+- Energy (能量): base unit factors — Joule = 1 × base(Energy), Kilojoule = 1000 × base(Energy), Calorie = 4.184 × base(Energy), Kilocalorie = 4184 × base(Energy)
+- Pressure (压强): base unit factors — Pascal = 1 × base(Pressure), Kilopascal = 1000 × base(Pressure), Bar = 100000 × base(Pressure), Megapascal = 1e+06 × base(Pressure)
+- Fuel economy (油耗): special conversion (non-linear).
+- Angle (角度): base unit factors — Degree = 1 × base(Angle), Radian = 57.2958 × base(Angle), Gradian = 0.9 × base(Angle), Arcminute = 0.0166667 × base(Angle)
+
+## Notable formulas
+- Temperature: F = C × 9/5 + 32; K = C + 273.15.
+- Fuel economy: mpg(US) = 235.215 / (L/100km); mpg(UK) = 282.481 / (L/100km).
+- Angle: radians = degrees × π/180.
