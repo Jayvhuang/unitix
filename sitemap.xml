@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://unitix.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://unitix.com/tools/length.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://unitix.com/tools/mass.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://unitix.com/tools/temperature.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://unitix.com/tools/area.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://unitix.com/tools/volume.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://unitix.com/tools/speed.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://unitix.com/tools/time.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://unitix.com/tools/data.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://unitix.com/tools/energy.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://unitix.com/tools/pressure.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://unitix.com/tools/fuel.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://unitix.com/tools/angle.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+</urlset>
