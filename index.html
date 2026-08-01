@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Unitix — Free Unit Converter (Length, Mass, Temperature and more)</title>
+<meta name="description" content="Unitix is a free bilingual unit converter. Convert length, mass, temperature, area, volume, speed, time, data, energy, pressure, fuel economy and angle instantly — no signup, all in your browser."/>
+<link rel="canonical" href="https://unitix.com/"/>
+<link rel="alternate" hreflang="en" href="https://unitix.com/"/>
+<link rel="alternate" hreflang="zh-CN" href="https://unitix.com/?lang=zh"/>
+<link rel="alternate" hreflang="x-default" href="https://unitix.com/"/>
+<meta property="og:title" content="Unitix — Free Unit Converter"/>
+<meta property="og:description" content="Convert units instantly. Free, bilingual, no signup."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://unitix.com/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="stylesheet" href="styles.css"/>
+<!-- Google AdSense — Auto Ads mode (inert placeholder). Activate by replacing ca-pub-XXXXXXXXXXXXXX with your real publisher ID and removing the comment wrapper. -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Unitix", "url": "https://unitix.com/", "inLanguage": ["en", "zh-CN"], "description": "Free bilingual unit converters: length, mass, temperature, area, volume, speed, time, data, energy, pressure, fuel economy and angle."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Unitix", "url": "https://unitix.com/", "inLanguage": ["en", "zh-CN"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://unitix.com/tools/length.html", "name": "Length Converter"}, {"@type": "ListItem", "position": 2, "url": "https://unitix.com/tools/mass.html", "name": "Mass Converter"}, {"@type": "ListItem", "position": 3, "url": "https://unitix.com/tools/temperature.html", "name": "Temperature Converter"}, {"@type": "ListItem", "position": 4, "url": "https://unitix.com/tools/area.html", "name": "Area Converter"}, {"@type": "ListItem", "position": 5, "url": "https://unitix.com/tools/volume.html", "name": "Volume Converter"}, {"@type": "ListItem", "position": 6, "url": "https://unitix.com/tools/speed.html", "name": "Speed Converter"}, {"@type": "ListItem", "position": 7, "url": "https://unitix.com/tools/time.html", "name": "Time Converter"}, {"@type": "ListItem", "position": 8, "url": "https://unitix.com/tools/data.html", "name": "Data Converter"}, {"@type": "ListItem", "position": 9, "url": "https://unitix.com/tools/energy.html", "name": "Energy Converter"}, {"@type": "ListItem", "position": 10, "url": "https://unitix.com/tools/pressure.html", "name": "Pressure Converter"}, {"@type": "ListItem", "position": 11, "url": "https://unitix.com/tools/fuel.html", "name": "Fuel economy Converter"}, {"@type": "ListItem", "position": 12, "url": "https://unitix.com/tools/angle.html", "name": "Angle Converter"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": ["en", "zh-CN"], "mainEntity": [{"@type": "Question", "name": "Is Unitix free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. All converters are free and run entirely in your browser."}}, {"@type": "Question", "name": "Do I need to sign up?", "acceptedAnswer": {"@type": "Answer", "text": "No account or login is required."}}, {"@type": "Question", "name": "How accurate are the conversions?", "acceptedAnswer": {"@type": "Answer", "text": "We use internationally recognized conversion factors — SI units plus standard imperial and US customary values."}}, {"@type": "Question", "name": "Does Unitix work offline?", "acceptedAnswer": {"@type": "Answer", "text": "The calculations run locally in your browser; only ads and affiliate links need a connection."}}]}</script>
+</head>
+<body>
+<header class="site-header"><div class="wrap nav">
+  <a class="logo" href="index.html"><span class="mark">⇄</span><span>Unitix</span></a>
+  <span class="spacer"></span>
+  <button class="toggle" id="theme-btn" data-i18n="theme" aria-label="Toggle theme">Theme</button>
+  <button class="toggle" id="lang-btn" aria-label="Toggle language">中文</button>
+</div></header>
+<main class="wrap">
+  <section class="hero">
+    <h1 data-i18n="tagline">Free unit converter — instant, accurate, no signup.</h1>
+    <p class="lead" data-i18n="choose">Choose a converter</p>
+  </section>
+  <nav class="tabs" id="tabs"><button class="tab" data-tab="length" data-en="Length" data-zh="长度">Length</button>
+<button class="tab" data-tab="mass" data-en="Mass" data-zh="质量">Mass</button>
+<button class="tab" data-tab="temperature" data-en="Temperature" data-zh="温度">Temperature</button>
+<button class="tab" data-tab="area" data-en="Area" data-zh="面积">Area</button>
+<button class="tab" data-tab="volume" data-en="Volume" data-zh="体积">Volume</button>
+<button class="tab" data-tab="speed" data-en="Speed" data-zh="速度">Speed</button>
+<button class="tab" data-tab="time" data-en="Time" data-zh="时间">Time</button>
+<button class="tab" data-tab="data" data-en="Data" data-zh="数据">Data</button>
+<button class="tab" data-tab="energy" data-en="Energy" data-zh="能量">Energy</button>
+<button class="tab" data-tab="pressure" data-en="Pressure" data-zh="压强">Pressure</button>
+<button class="tab" data-tab="fuel" data-en="Fuel economy" data-zh="油耗">Fuel economy</button>
+<button class="tab" data-tab="angle" data-en="Angle" data-zh="角度">Angle</button></nav>
+  <div class="panels"><section class="panel" id="p-length" aria-label="Length converter">
+  <h2 data-en="Length" data-zh="长度">Length</h2>
+  <p class="ptag" data-en="Meters, feet, miles and more — convert instantly." data-zh="米、英尺、英里等——即时换算。">Meters, feet, miles and more — convert instantly.</p>
+  <div class="conv" data-conv="length">
+    <div class="crow">
+      <div class="field"><label data-i18n="from">From</label>
+        <select class="from" data-conv="length"><option value="kilometer" data-en="Kilometer" data-zh="千米">Kilometer</option>
+<option value="meter" data-en="Meter" data-zh="米" selected>Meter</option>
+<option value="decimeter" data-en="Decimeter" data-zh="分米">Decimeter</option>
+<option value="centimeter" data-en="Centimeter" data-zh="厘米">Centimeter</option>
+<option value="millimeter" data-en="Millimeter" data-zh="毫米">Millimeter</option>
+<option value="micrometer" data-en="Micrometer" data-zh="微米">Micrometer</option>
+<option value="mile" data-en="Mile" data-zh="英里">Mile</option>
+<option value="yard" data-en="Yard" data-zh="码">Yard</option>
+<option value="foot" data-en="Foot" data-zh="英尺">Foot</option>
+<option value="inch" data-en="Inch" data-zh="英寸">Inch</option>
+<option value="nautical_mile" data-en="Nautical mile" data-zh="海里">Nautical mile</option></select></div>
+      <div class="field grow"><label data-i18n="value">Value</label>
+        <input class="val" type="number" inputmode="decimal" value="1" /></div>
+    </div>
+    <div class="swaprow">
+      <button class="swap" data-conv="length" aria-label="Swap">⇅</button>
+      <button class="copy" data-conv="length" data-i18n="copy">Copy</button>
+    </div>
+    <div class="crow">
+      <div class="field"><label data-i18n="to">To</label>
+        <select class="to" data-conv="length"><option value="kilometer" data-en="Kilometer" data-zh="千米">Kilometer</option>
+<option value="meter" data-en="Meter" data-zh="米">Meter</option>
+<option value="decimeter" data-en="Decimeter" data-zh="分米">Decimeter</option>
+<option value="centimeter" data-en="Centimeter" data-zh="厘米">Centimeter</option>
+<option value="millimeter" data-en="Millimeter" data-zh="毫米">Millimeter</option>
+<option value="micrometer" data-en="Micrometer" data-zh="微米">Micrometer</option>
+<option value="mile" data-en="Mile" data-zh="英里">Mile</option>
+<option value="yard" data-en="Yard" data-zh="码">Yard</option>
+<option value="foot" data-en="Foot" data-zh="英尺" selected>Foot</option>
+<option value="inch" data-en="Inch" data-zh="英寸">Inch</option>
+<option value="nautical_mile" data-en="Nautical mile" data-zh="海里">Nautical mile</option></select></div>
+      <div class="field grow"><label data-i18n="result">Result</label>
+        <output class="res">—</output></div>
+    </div>
+    <div class="tablewrap">
+      <div class="thdr" data-i18n="all_units">All units</div>
+      <table class="ctable"><tbody></tbody></table>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="p-mass" aria-label="Mass converter">
+  <h2 data-en="Mass" data-zh="质量">Mass</h2>
+  <p class="ptag" data-en="Kilograms, pounds, ounces and stones — convert instantly." data-zh="千克、磅、盎司、英石——即时换算。">Kilograms, pounds, ounces and stones — convert instantly.</p>
+  <div class="conv" data-conv="mass">
+    <div class="crow">
+      <div class="field"><label data-i18n="from">From</label>
+        <select class="from" data-conv="mass"><option value="metric_ton" data-en="Metric ton" data-zh="公吨">Metric ton</option>
+<option value="kilogram" data-en="Kilogram" data-zh="千克" selected>Kilogram</option>
+<option value="gram" data-en="Gram" data-zh="克">Gram</option>
+<option value="milligram" data-en="Milligram" data-zh="毫克">Milligram</option>
+<option value="pound" data-en="Pound" data-zh="磅">Pound</option>
+<option value="ounce" data-en="Ounce" data-zh="盎司">Ounce</option>
+<option value="stone" data-en="Stone" data-zh="英石">Stone</option>
+<option value="us_ton" data-en="US ton" data-zh="美吨">US ton</option></select></div>
+      <div class="field grow"><label data-i18n="value">Value</label>
+        <input class="val" type="number" inputmode="decimal" value="1" /></div>
+    </div>
+    <div class="swaprow">
+      <button class="swap" data-conv="mass" aria-label="Swap">⇅</button>
+      <button class="copy" data-conv="mass" data-i18n="copy">Copy</button>
+    </div>
+    <div class="crow">
+      <div class="field"><label data-i18n="to">To</label>
+        <select class="to" data-conv="mass"><option value="metric_ton" data-en="Metric ton" data-zh="公吨">Metric ton</option>
+<option value="kilogram" data-en="Kilogram" data-zh="千克">Kilogram</option>
+<option value="gram" data-en="Gram" data-zh="克">Gram</option>
+<option value="milligram" data-en="Milligram" data-zh="毫克">Milligram</option>
+<option value="pound" data-en="Pound" data-zh="磅" selected>Pound</option>
+<option value="ounce" data-en="Ounce" data-zh="盎司">Ounce</option>
+<option value="stone" data-en="Stone" data-zh="英石">Stone</option>
+<option value="us_ton" data-en="US ton" data-zh="美吨">US ton</option></select></div>
+      <div class="field grow"><label data-i18n="result">Result</label>
+        <output class="res">—</output></div>
+    </div>
+    <div class="tablewrap">
+      <div class="thdr" data-i18n="all_units">All units</div>
+      <table class="ctable"><tbody></tbody></table>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="p-temperature" aria-label="Temperature converter">
+  <h2 data-en="Temperature" data-zh="温度">Temperature</h2>
+  <p class="ptag" data-en="Celsius, Fahrenheit and Kelvin — convert instantly." data-zh="摄氏度、华氏度、开尔文——即时换算。">Celsius, Fahrenheit and Kelvin — convert instantly.</p>
+  <div class="conv" data-conv="temperature">
+    <div class="crow">
+      <div class="field"><label data-i18n="from">From</label>
+        <select class="from" data-conv="temperature"><option value="celsius" data-en="Celsius" data-zh="摄氏度" selected>Celsius</option>
+<option value="fahrenheit" data-en="Fahrenheit" data-zh="华氏度">Fahrenheit</option>
+<option value="kelvin" data-en="Kelvin" data-zh="开尔文">Kelvin</option></select></div>
+      <div class="field grow"><label data-i18n="value">Value</label>
+        <input class="val" type="number" inputmode="decimal" value="1" /></div>
+    </div>
+    <div class="swaprow">
+      <button class="swap" data-conv="temperature" aria-label="Swap">⇅</button>
+      <button class="copy" data-conv="temperature" data-i18n="copy">Copy</button>
+    </div>
+    <div class="crow">
+      <div class="field"><label data-i18n="to">To</label>
+        <select class="to" data-conv="temperature"><option value="celsius" data-en="Celsius" data-zh="摄氏度">Celsius</option>
+<option value="fahrenheit" data-en="Fahrenheit" data-zh="华氏度" selected>Fahrenheit</option>
+<option value="kelvin" data-en="Kelvin" data-zh="开尔文">Kelvin</option></select></div>
+      <div class="field grow"><label data-i18n="result">Result</label>
+        <output class="res">—</output></div>
+    </div>
+    <div class="tablewrap">
+      <div class="thdr" data-i18n="all_units">All units</div>
+      <table class="ctable"><tbody></tbody></table>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="p-area" aria-label="Area converter">
+  <h2 data-en="Area" data-zh="面积">Area</h2>
+  <p class="ptag" data-en="Square meters, feet, acres, hectares — convert instantly." data-zh="平方米、平方英尺、英亩、公顷——即时换算。">Square meters, feet, acres, hectares — convert instantly.</p>
+  <div class="conv" data-conv="area">
+    <div class="crow">
+      <div class="field"><label data-i18n="from">From</label>
+        <select class="from" data-conv="area"><option value="sq_kilometer" data-en="Square kilometer" data-zh="平方千米">Square kilometer</option>
+<option value="square_meter" data-en="Square meter" data-zh="平方米" selected>Square meter</option>
+<option value="square_centimeter" data-en="Square centimeter" data-zh="平方厘米">Square centimeter</option>
+<option value="hectare" data-en="Hectare" data-zh="公顷">Hectare</option>
+<option value="acre" data-en="Acre" data-zh="英亩">Acre</option>
+<option value="square_foot" data-en="Square foot" data-zh="平方英尺">Square foot</option>
+<option value="square_inch" data-en="Square inch" data-zh="平方英寸">Square inch</option>
+<option value="square_mile" data-en="Square mile" data-zh="平方英里">Square mile</option></select></div>
+      <div class="field grow"><label data-i18n="value">Value</label>
+        <input class="val" type="number" inputmode="decimal" value="1" /></div>
+    </div>
+    <div class="swaprow">
+      <button class="swap" data-conv="area" aria-label="Swap">⇅</button>
+      <button class="copy" data-conv="area" data-i18n="copy">Copy</button>
+    </div>
+    <div class="crow">
+      <div class="field"><label data-i18n="to">To</label>
+        <select class="to" data-conv="area"><option value="sq_kilometer" data-en="Square kilometer" data-zh="平方千米">Square kilometer</option>
+<option value="square_meter" data-en="Square meter" data-zh="平方米">Square meter</option>
+<option value="square_centimeter" data-en="Square centimeter" data-zh="平方厘米">Square centimeter</option>
+<option value="hectare" data-en="Hectare" data-zh="公顷">Hectare</option>
+<option value="acre" data-en="Acre" data-zh="英亩">Acre</option>
+<option value="square_foot" data-en="Square foot" data-zh="平方英尺" selected>Square foot</option>
+<option value="square_inch" data-en="Square inch" data-zh="平方英寸">Square inch</option>
+<option value="square_mile" data-en="Square mile" data-zh="平方英里">Square mile</option></select></div>
+      <div class="field grow"><label data-i18n="result">Result</label>
+        <output class="res">—</output></div>
+    </div>
+    <div class="tablewrap">
+      <div class="thdr" data-i18n="all_units">All units</div>
+      <table class="ctable"><tbody></tbody></table>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="p-volume" aria-label="Volume converter">
+  <h2 data-en="Volume" data-zh="体积">Volume</h2>
+  <p class="ptag" data-en="Liters, gallons, cups and more — convert instantly." data-zh="升、加仑、杯等——即时换算。">Liters, gallons, cups and more — convert instantly.</p>
+  <div class="conv" data-conv="volume">
+    <div class="crow">
+      <div class="field"><label data-i18n="from">From</label>
+        <select class="from" data-conv="volume"><option value="cubic_meter" data-en="Cubic meter" data-zh="立方米">Cubic meter</option>
+<option value="liter" data-en="Liter" data-zh="升" selected>Liter</option>
+<option value="milliliter" data-en="Milliliter" data-zh="毫升">Milliliter</option>
+<option value="gallon_us" data-en="Gallon (US)" data-zh="加仑(美)">Gallon (US)</option>
+<option value="quart_us" data-en="Quart (US)" data-zh="夸脱(美)">Quart (US)</option>
+<option value="pint_us" data-en="Pint (US)" data-zh="品脱(美)">Pint (US)</option>
+<option value="cup_us" data-en="Cup (US)" data-zh="杯(美)">Cup (US)</option>
+<option value="fluid_ounce_us" data-en="Fluid ounce (US)" data-zh="液量盎司(美)">Fluid ounce (US)</option>
+<option value="tablespoon_us" data-en="Tablespoon (US)" data-zh="汤匙(美)">Tablespoon (US)</option>
+<option value="teaspoon_us" data-en="Teaspoon (US)" data-zh="茶匙(美)">Teaspoon (US)</option>
+<option value="cubic_foot" data-en="Cubic foot" data-zh="立方英尺">Cubic foot</option>
+<option value="cubic_inch" data-en="Cubic inch" data-zh="立方英寸">Cubic inch</option></select></div>
+      <div class="field grow"><label data-i18n="value">Value</label>
+        <input class="val" type="number" inputmode="decimal" value="1" /></div>
+    </div>
+    <div class="swaprow">
+      <button class="swap" data-conv="volume" aria-label="Swap">⇅</button>
+      <button class="copy" data-conv="volume" data-i18n="copy">Copy</button>
+    </div>
+    <div class="crow">
+      <div class="field"><label data-i18n="to">To</label>
+        <select class="to" data-conv="volume"><option value="cubic_meter" data-en="Cubic meter" data-zh="立方米">Cubic meter</option>
+<option value="liter" data-en="Liter" data-zh="升">Liter</option>
+<option value="milliliter" data-en="Milliliter" data-zh="毫升">Milliliter</option>
+<option value="gallon_us" data-en="Gallon (US)" data-zh="加仑(美)" selected>Gallon (US)</option>
+<option value="quart_us" data-en="Quart (US)" data-zh="夸脱(美)">Quart (US)</option>
+<option value="pint_us" data-en="Pint (US)" data-zh="品脱(美)">Pint (US)</option>
+<option value="cup_us" data-en="Cup (US)" data-zh="杯(美)">Cup (US)</option>
+<option value="fluid_ounce_us" data-en="Fluid ounce (US)" data-zh="液量盎司(美)">Fluid ounce (US)</option>
+<option value="tablespoon_us" data-en="Tablespoon (US)" data-zh="汤匙(美)">Tablespoon (US)</option>
+<option value="teaspoon_us" data-en="Teaspoon (US)" data-zh="茶匙(美)">Teaspoon (US)</option>
+<option value="cubic_foot" data-en="Cubic foot" data-zh="立方英尺">Cubic foot</option>
+<option value="cubic_inch" data-en="Cubic inch" data-zh="立方英寸">Cubic inch</option></select></div>
+      <div class="field grow"><label data-i18n="result">Result</label>
+        <output class="res">—</output></div>
+    </div>
+    <div class="tablewrap">
+      <div class="thdr" data-i18n="all_units">All units</div>
+      <table class="ctable"><tbody></tbody></table>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="p-speed" aria-label="Speed converter">
+  <h2 data-en="Speed" data-zh="速度">Speed</h2>
+  <p class="ptag" data-en="km/h, mph, knots, mach — convert instantly." data-zh="公里/时、英里/时、节、马赫——即时换算。">km/h, mph, knots, mach — convert instantly.</p>
+  <div class="conv" data-conv="speed">
+    <div class="crow">
+      <div class="field"><label data-i18n="from">From</label>
+        <select class="from" data-conv="speed"><option value="mps" data-en="Meter/second" data-zh="米/秒">Meter/second</option>
+<option value="kmh" data-en="Kilometer/hour" data-zh="千米/时" selected>Kilometer/hour</option>
+<option value="mph" data-en="Mile/hour" data-zh="英里/时">Mile/hour</option>
+<option value="fps" data-en="Foot/second" data-zh="英尺/秒">Foot/second</option>
+<option value="knot" data-en="Knot" data-zh="节">Knot</option>
+<option value="mach" data-en="Mach" data-zh="马赫">Mach</option></select></div>
+      <div class="field grow"><label data-i18n="value">Value</label>
+        <input class="val" type="number" inputmode="decimal" value="1" /></div>
+    </div>
+    <div class="swaprow">
+      <button class="swap" data-conv="speed" aria-label="Swap">⇅</button>
+      <button class="copy" data-conv="speed" data-i18n="copy">Copy</button>
+    </div>
+    <div class="crow">
+      <div class="field"><label data-i18n="to">To</label>
+        <select class="to" data-conv="speed"><option value="mps" data-en="Meter/second" data-zh="米/秒">Meter/second</option>
+<option value="kmh" data-en="Kilometer/hour" data-zh="千米/时">Kilometer/hour</option>
+<option value="mph" data-en="Mile/hour" data-zh="英里/时" selected>Mile/hour</option>
+<option value="fps" data-en="Foot/second" data-zh="英尺/秒">Foot/second</option>
+<option value="knot" data-en="Knot" data-zh="节">Knot</option>
+<option value="mach" data-en="Mach" data-zh="马赫">Mach</option></select></div>
+      <div class="field grow"><label data-i18n="result">Result</label>
+        <output class="res">—</output></div>
+    </div>
+    <div class="tablewrap">
+      <div class="thdr" data-i18n="all_units">All units</div>
+      <table class="ctable"><tbody></tbody></table>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="p-time" aria-label="Time converter">
+  <h2 data-en="Time" data-zh="时间">Time</h2>
+  <p class="ptag" data-en="Seconds, minutes, hours, days, weeks — convert instantly." data-zh="秒、分、时、天、周——即时换算。">Seconds, minutes, hours, days, weeks — convert instantly.</p>
+  <div class="conv" data-conv="time">
+    <div class="crow">
+      <div class="field"><label data-i18n="from">From</label>
+        <select class="from" data-conv="time"><option value="nanosecond" data-en="Nanosecond" data-zh="纳秒">Nanosecond</option>
+<option value="microsecond" data-en="Microsecond" data-zh="微秒">Microsecond</option>
+<option value="millisecond" data-en="Millisecond" data-zh="毫秒">Millisecond</option>
+<option value="second" data-en="Second" data-zh="秒">Second</option>
+<option value="minute" data-en="Minute" data-zh="分">Minute</option>
+<option value="hour" data-en="Hour" data-zh="时" selected>Hour</option>
+<option value="day" data-en="Day" data-zh="天">Day</option>
+<option value="week" data-en="Week" data-zh="周">Week</option>
+<option value="month" data-en="Month (avg)" data-zh="月(平均)">Month (avg)</option>
+<option value="year" data-en="Year (avg)" data-zh="年(平均)">Year (avg)</option></select></div>
+      <div class="field grow"><label data-i18n="value">Value</label>
+        <input class="val" type="number" inputmode="decimal" value="1" /></div>
+    </div>
+    <div class="swaprow">
+      <button class="swap" data-conv="time" aria-label="Swap">⇅</button>
+      <button class="copy" data-conv="time" data-i18n="copy">Copy</button>
+    </div>
+    <div class="crow">
+      <div class="field"><label data-i18n="to">To</label>
+        <select class="to" data-conv="time"><option value="nanosecond" data-en="Nanosecond" data-zh="纳秒">Nanosecond</option>
+<option value="microsecond" data-en="Microsecond" data-zh="微秒">Microsecond</option>
+<option value="millisecond" data-en="Millisecond" data-zh="毫秒">Millisecond</option>
+<option value="second" data-en="Second" data-zh="秒">Second</option>
+<option value="minute" data-en="Minute" data-zh="分" selected>Minute</option>
+<option value="hour" data-en="Hour" data-zh="时">Hour</option>
+<option value="day" data-en="Day" data-zh="天">Day</option>
+<option value="week" data-en="Week" data-zh="周">Week</option>
+<option value="month" data-en="Month (avg)" data-zh="月(平均)">Month (avg)</option>
+<option value="year" data-en="Year (avg)" data-zh="年(平均)">Year (avg)</option></select></div>
+      <div class="field grow"><label data-i18n="result">Result</label>
+        <output class="res">—</output></div>
+    </div>
+    <div class="tablewrap">
+      <div class="thdr" data-i18n="all_units">All units</div>
+      <table class="ctable"><tbody></tbody></table>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="p-data" aria-label="Data converter">
+  <h2 data-en="Data" data-zh="数据">Data</h2>
+  <p class="ptag" data-en="Bytes, KB, MB, GB, TB — decimal and binary — convert instantly." data-zh="字节、KB、MB、GB、TB——十进制与二进制——即时换算。">Bytes, KB, MB, GB, TB — decimal and binary — convert instantly.</p>
+  <div class="conv" data-conv="data">
+    <div class="crow">
+      <div class="field"><label data-i18n="from">From</label>
+        <select class="from" data-conv="data"><option value="bit" data-en="Bit" data-zh="比特">Bit</option>
+<option value="byte" data-en="Byte" data-zh="字节">Byte</option>
+<option value="kilobit" data-en="Kilobit" data-zh="千比特">Kilobit</option>
+<option value="kibibit" data-en="Kibibit" data-zh="Kibibit">Kibibit</option>
+<option value="kilobyte" data-en="Kilobyte (KB)" data-zh="千字节(KB)">Kilobyte (KB)</option>
+<option value="kibibyte" data-en="Kibibyte (KiB)" data-zh="Kibibyte(KiB)">Kibibyte (KiB)</option>
+<option value="megabyte" data-en="Megabyte (MB)" data-zh="兆字节(MB)" selected>Megabyte (MB)</option>
+<option value="mebibyte" data-en="Mebibyte (MiB)" data-zh="Mebibyte(MiB)">Mebibyte (MiB)</option>
+<option value="gigabyte" data-en="Gigabyte (GB)" data-zh="吉字节(GB)">Gigabyte (GB)</option>
+<option value="gibibyte" data-en="Gibibyte (GiB)" data-zh="Gibibyte(GiB)">Gibibyte (GiB)</option>
+<option value="terabyte" data-en="Terabyte (TB)" data-zh="太字节(TB)">Terabyte (TB)</option>
+<option value="tebibyte" data-en="Tebibyte (TiB)" data-zh="Tebibyte(TiB)">Tebibyte (TiB)</option></select></div>
+      <div class="field grow"><label data-i18n="value">Value</label>
+        <input class="val" type="number" inputmode="decimal" value="1" /></div>
+    </div>
+    <div class="swaprow">
+      <button class="swap" data-conv="data" aria-label="Swap">⇅</button>
+      <button class="copy" data-conv="data" data-i18n="copy">Copy</button>
+    </div>
+    <div class="crow">
+      <div class="field"><label data-i18n="to">To</label>
+        <select class="to" data-conv="data"><option value="bit" data-en="Bit" data-zh="比特">Bit</option>
+<option value="byte" data-en="Byte" data-zh="字节">Byte</option>
+<option value="kilobit" data-en="Kilobit" data-zh="千比特">Kilobit</option>
+<option value="kibibit" data-en="Kibibit" data-zh="Kibibit">Kibibit</option>
+<option value="kilobyte" data-en="Kilobyte (KB)" data-zh="千字节(KB)">Kilobyte (KB)</option>
+<option value="kibibyte" data-en="Kibibyte (KiB)" data-zh="Kibibyte(KiB)">Kibibyte (KiB)</option>
+<option value="megabyte" data-en="Megabyte (MB)" data-zh="兆字节(MB)">Megabyte (MB)</option>
+<option value="mebibyte" data-en="Mebibyte (MiB)" data-zh="Mebibyte(MiB)">Mebibyte (MiB)</option>
+<option value="gigabyte" data-en="Gigabyte (GB)" data-zh="吉字节(GB)" selected>Gigabyte (GB)</option>
+<option value="gibibyte" data-en="Gibibyte (GiB)" data-zh="Gibibyte(GiB)">Gibibyte (GiB)</option>
+<option value="terabyte" data-en="Terabyte (TB)" data-zh="太字节(TB)">Terabyte (TB)</option>
+<option value="tebibyte" data-en="Tebibyte (TiB)" data-zh="Tebibyte(TiB)">Tebibyte (TiB)</option></select></div>
+      <div class="field grow"><label data-i18n="result">Result</label>
+        <output class="res">—</output></div>
+    </div>
+    <div class="tablewrap">
+      <div class="thdr" data-i18n="all_units">All units</div>
+      <table class="ctable"><tbody></tbody></table>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="p-energy" aria-label="Energy converter">
+  <h2 data-en="Energy" data-zh="能量">Energy</h2>
+  <p class="ptag" data-en="Joules, calories, kWh, BTU — convert instantly." data-zh="焦耳、卡路里、千瓦时、英热单位——即时换算。">Joules, calories, kWh, BTU — convert instantly.</p>
+  <div class="conv" data-conv="energy">
+    <div class="crow">
+      <div class="field"><label data-i18n="from">From</label>
+        <select class="from" data-conv="energy"><option value="joule" data-en="Joule" data-zh="焦耳">Joule</option>
+<option value="kilojoule" data-en="Kilojoule" data-zh="千焦" selected>Kilojoule</option>
+<option value="calorie" data-en="Calorie" data-zh="卡路里">Calorie</option>
+<option value="kilocalorie" data-en="Kilocalorie" data-zh="千卡">Kilocalorie</option>
+<option value="watt_hour" data-en="Watt-hour" data-zh="瓦时">Watt-hour</option>
+<option value="kilowatt_hour" data-en="Kilowatt-hour" data-zh="千瓦时">Kilowatt-hour</option>
+<option value="btu" data-en="BTU" data-zh="英热单位">BTU</option>
+<option value="electronvolt" data-en="Electronvolt" data-zh="电子伏特">Electronvolt</option>
+<option value="foot_pound" data-en="Foot-pound" data-zh="英尺·磅">Foot-pound</option></select></div>
+      <div class="field grow"><label data-i18n="value">Value</label>
+        <input class="val" type="number" inputmode="decimal" value="1" /></div>
+    </div>
+    <div class="swaprow">
+      <button class="swap" data-conv="energy" aria-label="Swap">⇅</button>
+      <button class="copy" data-conv="energy" data-i18n="copy">Copy</button>
+    </div>
+    <div class="crow">
+      <div class="field"><label data-i18n="to">To</label>
+        <select class="to" data-conv="energy"><option value="joule" data-en="Joule" data-zh="焦耳">Joule</option>
+<option value="kilojoule" data-en="Kilojoule" data-zh="千焦">Kilojoule</option>
+<option value="calorie" data-en="Calorie" data-zh="卡路里">Calorie</option>
+<option value="kilocalorie" data-en="Kilocalorie" data-zh="千卡" selected>Kilocalorie</option>
+<option value="watt_hour" data-en="Watt-hour" data-zh="瓦时">Watt-hour</option>
+<option value="kilowatt_hour" data-en="Kilowatt-hour" data-zh="千瓦时">Kilowatt-hour</option>
+<option value="btu" data-en="BTU" data-zh="英热单位">BTU</option>
+<option value="electronvolt" data-en="Electronvolt" data-zh="电子伏特">Electronvolt</option>
+<option value="foot_pound" data-en="Foot-pound" data-zh="英尺·磅">Foot-pound</option></select></div>
+      <div class="field grow"><label data-i18n="result">Result</label>
+        <output class="res">—</output></div>
+    </div>
+    <div class="tablewrap">
+      <div class="thdr" data-i18n="all_units">All units</div>
+      <table class="ctable"><tbody></tbody></table>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="p-pressure" aria-label="Pressure converter">
+  <h2 data-en="Pressure" data-zh="压强">Pressure</h2>
+  <p class="ptag" data-en="Pascal, kPa, bar, psi, atm — convert instantly." data-zh="帕斯卡、千帕、巴、磅/平方英寸、标准大气压——即时换算。">Pascal, kPa, bar, psi, atm — convert instantly.</p>
+  <div class="conv" data-conv="pressure">
+    <div class="crow">
+      <div class="field"><label data-i18n="from">From</label>
+        <select class="from" data-conv="pressure"><option value="pascal" data-en="Pascal" data-zh="帕斯卡">Pascal</option>
+<option value="kilopascal" data-en="Kilopascal" data-zh="千帕">Kilopascal</option>
+<option value="bar" data-en="Bar" data-zh="巴" selected>Bar</option>
+<option value="megapascal" data-en="Megapascal" data-zh="兆帕">Megapascal</option>
+<option value="psi" data-en="Pound/square inch" data-zh="磅/平方英寸">Pound/square inch</option>
+<option value="atm" data-en="Atmosphere" data-zh="标准大气压">Atmosphere</option>
+<option value="mmhg" data-en="mmHg" data-zh="毫米汞柱">mmHg</option>
+<option value="inhg" data-en="inHg" data-zh="英寸汞柱">inHg</option>
+<option value="torr" data-en="Torr" data-zh="托">Torr</option></select></div>
+      <div class="field grow"><label data-i18n="value">Value</label>
+        <input class="val" type="number" inputmode="decimal" value="1" /></div>
+    </div>
+    <div class="swaprow">
+      <button class="swap" data-conv="pressure" aria-label="Swap">⇅</button>
+      <button class="copy" data-conv="pressure" data-i18n="copy">Copy</button>
+    </div>
+    <div class="crow">
+      <div class="field"><label data-i18n="to">To</label>
+        <select class="to" data-conv="pressure"><option value="pascal" data-en="Pascal" data-zh="帕斯卡">Pascal</option>
+<option value="kilopascal" data-en="Kilopascal" data-zh="千帕">Kilopascal</option>
+<option value="bar" data-en="Bar" data-zh="巴">Bar</option>
+<option value="megapascal" data-en="Megapascal" data-zh="兆帕">Megapascal</option>
+<option value="psi" data-en="Pound/square inch" data-zh="磅/平方英寸" selected>Pound/square inch</option>
+<option value="atm" data-en="Atmosphere" data-zh="标准大气压">Atmosphere</option>
+<option value="mmhg" data-en="mmHg" data-zh="毫米汞柱">mmHg</option>
+<option value="inhg" data-en="inHg" data-zh="英寸汞柱">inHg</option>
+<option value="torr" data-en="Torr" data-zh="托">Torr</option></select></div>
+      <div class="field grow"><label data-i18n="result">Result</label>
+        <output class="res">—</output></div>
+    </div>
+    <div class="tablewrap">
+      <div class="thdr" data-i18n="all_units">All units</div>
+      <table class="ctable"><tbody></tbody></table>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="p-fuel" aria-label="Fuel economy converter">
+  <h2 data-en="Fuel economy" data-zh="油耗">Fuel economy</h2>
+  <p class="ptag" data-en="L/100km and MPG (US/UK) — convert instantly." data-zh="升/100公里 与 每加仑英里(美/英)——即时换算。">L/100km and MPG (US/UK) — convert instantly.</p>
+  <div class="conv" data-conv="fuel">
+    <div class="crow">
+      <div class="field"><label data-i18n="from">From</label>
+        <select class="from" data-conv="fuel"><option value="l100" data-en="L/100 km" data-zh="升/100公里" selected>L/100 km</option>
+<option value="mpg_us" data-en="MPG (US)" data-zh="每加仑英里(美)">MPG (US)</option>
+<option value="mpg_uk" data-en="MPG (UK)" data-zh="每加仑英里(英)">MPG (UK)</option></select></div>
+      <div class="field grow"><label data-i18n="value">Value</label>
+        <input class="val" type="number" inputmode="decimal" value="1" /></div>
+    </div>
+    <div class="swaprow">
+      <button class="swap" data-conv="fuel" aria-label="Swap">⇅</button>
+      <button class="copy" data-conv="fuel" data-i18n="copy">Copy</button>
+    </div>
+    <div class="crow">
+      <div class="field"><label data-i18n="to">To</label>
+        <select class="to" data-conv="fuel"><option value="l100" data-en="L/100 km" data-zh="升/100公里">L/100 km</option>
+<option value="mpg_us" data-en="MPG (US)" data-zh="每加仑英里(美)" selected>MPG (US)</option>
+<option value="mpg_uk" data-en="MPG (UK)" data-zh="每加仑英里(英)">MPG (UK)</option></select></div>
+      <div class="field grow"><label data-i18n="result">Result</label>
+        <output class="res">—</output></div>
+    </div>
+    <div class="tablewrap">
+      <div class="thdr" data-i18n="all_units">All units</div>
+      <table class="ctable"><tbody></tbody></table>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="p-angle" aria-label="Angle converter">
+  <h2 data-en="Angle" data-zh="角度">Angle</h2>
+  <p class="ptag" data-en="Degrees, radians, gradians — convert instantly." data-zh="度、弧度、百分度——即时换算。">Degrees, radians, gradians — convert instantly.</p>
+  <div class="conv" data-conv="angle">
+    <div class="crow">
+      <div class="field"><label data-i18n="from">From</label>
+        <select class="from" data-conv="angle"><option value="degree" data-en="Degree" data-zh="度" selected>Degree</option>
+<option value="radian" data-en="Radian" data-zh="弧度">Radian</option>
+<option value="gradian" data-en="Gradian" data-zh="百分度">Gradian</option>
+<option value="arcminute" data-en="Arcminute" data-zh="角分">Arcminute</option>
+<option value="arcsecond" data-en="Arcsecond" data-zh="角秒">Arcsecond</option>
+<option value="turn" data-en="Turn" data-zh="圈">Turn</option>
+<option value="milliradian" data-en="Milliradian" data-zh="毫弧度">Milliradian</option></select></div>
+      <div class="field grow"><label data-i18n="value">Value</label>
+        <input class="val" type="number" inputmode="decimal" value="1" /></div>
+    </div>
+    <div class="swaprow">
+      <button class="swap" data-conv="angle" aria-label="Swap">⇅</button>
+      <button class="copy" data-conv="angle" data-i18n="copy">Copy</button>
+    </div>
+    <div class="crow">
+      <div class="field"><label data-i18n="to">To</label>
+        <select class="to" data-conv="angle"><option value="degree" data-en="Degree" data-zh="度">Degree</option>
+<option value="radian" data-en="Radian" data-zh="弧度" selected>Radian</option>
+<option value="gradian" data-en="Gradian" data-zh="百分度">Gradian</option>
+<option value="arcminute" data-en="Arcminute" data-zh="角分">Arcminute</option>
+<option value="arcsecond" data-en="Arcsecond" data-zh="角秒">Arcsecond</option>
+<option value="turn" data-en="Turn" data-zh="圈">Turn</option>
+<option value="milliradian" data-en="Milliradian" data-zh="毫弧度">Milliradian</option></select></div>
+      <div class="field grow"><label data-i18n="result">Result</label>
+        <output class="res">—</output></div>
+    </div>
+    <div class="tablewrap">
+      <div class="thdr" data-i18n="all_units">All units</div>
+      <table class="ctable"><tbody></tbody></table>
+    </div>
+  </div>
+</section>
+</div>
+  <section class="az"><h2 data-i18n="amazon_title">Recommended tools</h2><div class="az-grid">
+<a class="az-card" href="https://www.amazon.com/s?k=digital+kitchen+scale&tag=unitix-20" rel="sponsored nofollow noopener" target="_blank"><div class="az-ico">⚖️</div><div class="az-name" data-en="Digital Kitchen Scale" data-zh="电子厨房秤">Digital Kitchen Scale</div><div class="az-desc" data-en="Weigh ingredients in grams and ounces." data-zh="称量食材的克与盎司。">Weigh ingredients in grams and ounces.</div></a>
+<a class="az-card" href="https://www.amazon.com/s?k=measuring+tape&tag=unitix-20" rel="sponsored nofollow noopener" target="_blank"><div class="az-ico">⚖️</div><div class="az-name" data-en="Measuring Tape" data-zh="卷尺">Measuring Tape</div><div class="az-desc" data-en="Measure length in feet, inches and meters." data-zh="以英尺、英寸、米测量长度。">Measure length in feet, inches and meters.</div></a>
+<a class="az-card" href="https://www.amazon.com/s?k=travel+luggage+scale&tag=unitix-20" rel="sponsored nofollow noopener" target="_blank"><div class="az-ico">⚖️</div><div class="az-name" data-en="Luggage Scale" data-zh="行李秤">Luggage Scale</div><div class="az-desc" data-en="Check baggage weight in kg and lb before you fly." data-zh="出行前用千克和磅核对行李重量。">Check baggage weight in kg and lb before you fly.</div></a>
+<a class="az-card" href="https://www.amazon.com/s?k=scientific+calculator&tag=unitix-20" rel="sponsored nofollow noopener" target="_blank"><div class="az-ico">⚖️</div><div class="az-name" data-en="Scientific Calculator" data-zh="科学计算器">Scientific Calculator</div><div class="az-desc" data-en="Convert units and solve formulas fast." data-zh="快速换算单位并计算公式。">Convert units and solve formulas fast.</div></a>
+</div><p class="az-disc" data-i18n="disclosure">As an Amazon Associate, Unitix earns from qualifying purchases.</p></section>
+</main>
+<footer><div class="wrap foot">
+  <span data-i18n="footer_note">Unitix — free bilingual unit converters. All calculations run locally in your browser.</span>
+  <span class="links"><a href="privacy.html" data-i18n="privacy">Privacy</a></span>
+</div></footer>
+<script>window.UNITIX_CONV={"length": {"kind": "linear", "special": null, "from": "meter", "to": "foot", "units": [{"k": "kilometer", "en": "Kilometer", "zh": "千米", "f": 1000}, {"k": "meter", "en": "Meter", "zh": "米", "f": 1}, {"k": "decimeter", "en": "Decimeter", "zh": "分米", "f": 0.1}, {"k": "centimeter", "en": "Centimeter", "zh": "厘米", "f": 0.01}, {"k": "millimeter", "en": "Millimeter", "zh": "毫米", "f": 0.001}, {"k": "micrometer", "en": "Micrometer", "zh": "微米", "f": 1e-06}, {"k": "mile", "en": "Mile", "zh": "英里", "f": 1609.344}, {"k": "yard", "en": "Yard", "zh": "码", "f": 0.9144}, {"k": "foot", "en": "Foot", "zh": "英尺", "f": 0.3048}, {"k": "inch", "en": "Inch", "zh": "英寸", "f": 0.0254}, {"k": "nautical_mile", "en": "Nautical mile", "zh": "海里", "f": 1852}]}, "mass": {"kind": "linear", "special": null, "from": "kilogram", "to": "pound", "units": [{"k": "metric_ton", "en": "Metric ton", "zh": "公吨", "f": 1000}, {"k": "kilogram", "en": "Kilogram", "zh": "千克", "f": 1}, {"k": "gram", "en": "Gram", "zh": "克", "f": 0.001}, {"k": "milligram", "en": "Milligram", "zh": "毫克", "f": 1e-06}, {"k": "pound", "en": "Pound", "zh": "磅", "f": 0.45359237}, {"k": "ounce", "en": "Ounce", "zh": "盎司", "f": 0.028349523125}, {"k": "stone", "en": "Stone", "zh": "英石", "f": 6.35029318}, {"k": "us_ton", "en": "US ton", "zh": "美吨", "f": 907.18474}]}, "temperature": {"kind": "special", "special": "temperature", "from": "celsius", "to": "fahrenheit", "units": [{"k": "celsius", "en": "Celsius", "zh": "摄氏度", "f": 1}, {"k": "fahrenheit", "en": "Fahrenheit", "zh": "华氏度", "f": 1}, {"k": "kelvin", "en": "Kelvin", "zh": "开尔文", "f": 1}]}, "area": {"kind": "linear", "special": null, "from": "square_meter", "to": "square_foot", "units": [{"k": "sq_kilometer", "en": "Square kilometer", "zh": "平方千米", "f": 1000000.0}, {"k": "square_meter", "en": "Square meter", "zh": "平方米", "f": 1}, {"k": "square_centimeter", "en": "Square centimeter", "zh": "平方厘米", "f": 0.0001}, {"k": "hectare", "en": "Hectare", "zh": "公顷", "f": 10000}, {"k": "acre", "en": "Acre", "zh": "英亩", "f": 4046.8564224}, {"k": "square_foot", "en": "Square foot", "zh": "平方英尺", "f": 0.09290304}, {"k": "square_inch", "en": "Square inch", "zh": "平方英寸", "f": 0.00064516}, {"k": "square_mile", "en": "Square mile", "zh": "平方英里", "f": 2589988.110336}]}, "volume": {"kind": "linear", "special": null, "from": "liter", "to": "gallon_us", "units": [{"k": "cubic_meter", "en": "Cubic meter", "zh": "立方米", "f": 1000}, {"k": "liter", "en": "Liter", "zh": "升", "f": 1}, {"k": "milliliter", "en": "Milliliter", "zh": "毫升", "f": 0.001}, {"k": "gallon_us", "en": "Gallon (US)", "zh": "加仑(美)", "f": 3.785411784}, {"k": "quart_us", "en": "Quart (US)", "zh": "夸脱(美)", "f": 0.946352946}, {"k": "pint_us", "en": "Pint (US)", "zh": "品脱(美)", "f": 0.473176473}, {"k": "cup_us", "en": "Cup (US)", "zh": "杯(美)", "f": 0.2365882365}, {"k": "fluid_ounce_us", "en": "Fluid ounce (US)", "zh": "液量盎司(美)", "f": 0.0295735295625}, {"k": "tablespoon_us", "en": "Tablespoon (US)", "zh": "汤匙(美)", "f": 0.01478676478125}, {"k": "teaspoon_us", "en": "Teaspoon (US)", "zh": "茶匙(美)", "f": 0.00492892159375}, {"k": "cubic_foot", "en": "Cubic foot", "zh": "立方英尺", "f": 28.316846592}, {"k": "cubic_inch", "en": "Cubic inch", "zh": "立方英寸", "f": 0.016387064}]}, "speed": {"kind": "linear", "special": null, "from": "kmh", "to": "mph", "units": [{"k": "mps", "en": "Meter/second", "zh": "米/秒", "f": 1}, {"k": "kmh", "en": "Kilometer/hour", "zh": "千米/时", "f": 0.277777777777778}, {"k": "mph", "en": "Mile/hour", "zh": "英里/时", "f": 0.44704}, {"k": "fps", "en": "Foot/second", "zh": "英尺/秒", "f": 0.3048}, {"k": "knot", "en": "Knot", "zh": "节", "f": 0.514444444444444}, {"k": "mach", "en": "Mach", "zh": "马赫", "f": 340.29}]}, "time": {"kind": "linear", "special": null, "from": "hour", "to": "minute", "units": [{"k": "nanosecond", "en": "Nanosecond", "zh": "纳秒", "f": 1e-09}, {"k": "microsecond", "en": "Microsecond", "zh": "微秒", "f": 1e-06}, {"k": "millisecond", "en": "Millisecond", "zh": "毫秒", "f": 0.001}, {"k": "second", "en": "Second", "zh": "秒", "f": 1}, {"k": "minute", "en": "Minute", "zh": "分", "f": 60}, {"k": "hour", "en": "Hour", "zh": "时", "f": 3600}, {"k": "day", "en": "Day", "zh": "天", "f": 86400}, {"k": "week", "en": "Week", "zh": "周", "f": 604800}, {"k": "month", "en": "Month (avg)", "zh": "月(平均)", "f": 2629800}, {"k": "year", "en": "Year (avg)", "zh": "年(平均)", "f": 31557600}]}, "data": {"kind": "linear", "special": null, "from": "megabyte", "to": "gigabyte", "units": [{"k": "bit", "en": "Bit", "zh": "比特", "f": 0.125}, {"k": "byte", "en": "Byte", "zh": "字节", "f": 1}, {"k": "kilobit", "en": "Kilobit", "zh": "千比特", "f": 125}, {"k": "kibibit", "en": "Kibibit", "zh": "Kibibit", "f": 128}, {"k": "kilobyte", "en": "Kilobyte (KB)", "zh": "千字节(KB)", "f": 1000}, {"k": "kibibyte", "en": "Kibibyte (KiB)", "zh": "Kibibyte(KiB)", "f": 1024}, {"k": "megabyte", "en": "Megabyte (MB)", "zh": "兆字节(MB)", "f": 1000000.0}, {"k": "mebibyte", "en": "Mebibyte (MiB)", "zh": "Mebibyte(MiB)", "f": 1048576}, {"k": "gigabyte", "en": "Gigabyte (GB)", "zh": "吉字节(GB)", "f": 1000000000.0}, {"k": "gibibyte", "en": "Gibibyte (GiB)", "zh": "Gibibyte(GiB)", "f": 1073741824}, {"k": "terabyte", "en": "Terabyte (TB)", "zh": "太字节(TB)", "f": 1000000000000.0}, {"k": "tebibyte", "en": "Tebibyte (TiB)", "zh": "Tebibyte(TiB)", "f": 1099511627776}]}, "energy": {"kind": "linear", "special": null, "from": "kilojoule", "to": "kilocalorie", "units": [{"k": "joule", "en": "Joule", "zh": "焦耳", "f": 1}, {"k": "kilojoule", "en": "Kilojoule", "zh": "千焦", "f": 1000}, {"k": "calorie", "en": "Calorie", "zh": "卡路里", "f": 4.184}, {"k": "kilocalorie", "en": "Kilocalorie", "zh": "千卡", "f": 4184}, {"k": "watt_hour", "en": "Watt-hour", "zh": "瓦时", "f": 3600}, {"k": "kilowatt_hour", "en": "Kilowatt-hour", "zh": "千瓦时", "f": 3600000}, {"k": "btu", "en": "BTU", "zh": "英热单位", "f": 1055.05585262}, {"k": "electronvolt", "en": "Electronvolt", "zh": "电子伏特", "f": 1.602176634e-19}, {"k": "foot_pound", "en": "Foot-pound", "zh": "英尺·磅", "f": 1.3558179483314}]}, "pressure": {"kind": "linear", "special": null, "from": "bar", "to": "psi", "units": [{"k": "pascal", "en": "Pascal", "zh": "帕斯卡", "f": 1}, {"k": "kilopascal", "en": "Kilopascal", "zh": "千帕", "f": 1000}, {"k": "bar", "en": "Bar", "zh": "巴", "f": 100000}, {"k": "megapascal", "en": "Megapascal", "zh": "兆帕", "f": 1000000.0}, {"k": "psi", "en": "Pound/square inch", "zh": "磅/平方英寸", "f": 6894.757293168}, {"k": "atm", "en": "Atmosphere", "zh": "标准大气压", "f": 101325}, {"k": "mmhg", "en": "mmHg", "zh": "毫米汞柱", "f": 133.322387415}, {"k": "inhg", "en": "inHg", "zh": "英寸汞柱", "f": 3386.389}, {"k": "torr", "en": "Torr", "zh": "托", "f": 133.322368421}]}, "fuel": {"kind": "special", "special": "fuel", "from": "l100", "to": "mpg_us", "units": [{"k": "l100", "en": "L/100 km", "zh": "升/100公里", "f": 1}, {"k": "mpg_us", "en": "MPG (US)", "zh": "每加仑英里(美)", "f": 1}, {"k": "mpg_uk", "en": "MPG (UK)", "zh": "每加仑英里(英)", "f": 1}]}, "angle": {"kind": "linear", "special": null, "from": "degree", "to": "radian", "units": [{"k": "degree", "en": "Degree", "zh": "度", "f": 1}, {"k": "radian", "en": "Radian", "zh": "弧度", "f": 57.29577951308232}, {"k": "gradian", "en": "Gradian", "zh": "百分度", "f": 0.9}, {"k": "arcminute", "en": "Arcminute", "zh": "角分", "f": 0.016666666666666666}, {"k": "arcsecond", "en": "Arcsecond", "zh": "角秒", "f": 0.0002777777777777778}, {"k": "turn", "en": "Turn", "zh": "圈", "f": 360}, {"k": "milliradian", "en": "Milliradian", "zh": "毫弧度", "f": 0.0572957795130823}]}};window.UNITIX_I18N={"en": {"tagline": "Free unit converter — instant, accurate, no signup.", "all_tools": "All tools", "from": "From", "to": "To", "value": "Value", "result": "Result", "swap": "Swap", "copy": "Copy", "copied": "Copied!", "all_units": "All units", "open_full": "Open full toolkit →", "privacy": "Privacy", "theme": "Theme", "choose": "Choose a converter", "amazon_title": "Recommended tools", "disclosure": "As an Amazon Associate, Unitix earns from qualifying purchases.", "footer_note": "Unitix — free bilingual unit converters. All calculations run locally in your browser.", "last_updated": "Last updated"}, "zh": {"tagline": "免费单位换算器——即时、精准、无需注册。", "all_tools": "全部工具", "from": "从", "to": "到", "value": "数值", "result": "结果", "swap": "互换", "copy": "复制", "copied": "已复制！", "all_units": "全部单位", "open_full": "打开完整工具箱 →", "privacy": "隐私", "theme": "主题", "choose": "选择换算类别", "amazon_title": "推荐工具", "disclosure": "作为亚马逊联盟成员，Unitix 从合格购买中获得收益。", "footer_note": "Unitix——免费双语单位换算器。所有计算均在您的浏览器本地完成。", "last_updated": "最后更新"}};</script>
+<script src="app.js"></script>
+</body>
+</html>
